@@ -7,6 +7,7 @@
 	</compatibility>
 	<theme id="design-theme" name="Design Liferay Theme">
 		<settings>
+			<setting key="portlet-setup-show-borders-default" value="false"></setting>
 		</settings>
 	</theme>
 </look-and-feel>

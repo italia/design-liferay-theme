@@ -14,14 +14,13 @@
 					<span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
 					<ul>
 						<li><a href="" class="u-padding-r-all"><span lang="en">English</span></a></li>
-						
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="Header-navbar ">
+	
+	<div class="Header-navbar">
 		<div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
 			<div class="Header-logo Grid-cell" aria-hidden="true">
 				<a href="" tabindex="-1">

@@ -61,22 +61,24 @@
 			<li><a class="js-fr-offcanvas-open" href="#menu" aria-controls="menu" aria-label="$label_accedi_menu" title="$label_accedi_menu">$label_vai_navigazione</a></li>
 		</ul>
 		
-		#if ($is_signed_in)
-			#dockbar()
-		#end
+		<!-- #if ($is_signed_in) -->
+<!-- 		#dockbar() -->
+		<!-- #end -->
 		
 		## includo header della pagina, contenente la nuova navigation
 		#parse ("$full_templates_path/header.vm")
 		
 		## main della pagina
 		<div id="main">
-			#if (!$is_signed_in)
-				<a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
-			#end
+			<!-- #if (!$is_signed_in) -->
+			<!-- <a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a> -->
+			<!-- #end -->
 			
 			## content della pagina
 			<div id="content">
-				<nav id="breadcrumbs">#breadcrumbs()</nav>
+			
+			<!-- commentata la breadcrumb -->
+			<!-- <nav id="breadcrumbs">#breadcrumbs()</nav> -->
 		
 				#if ($selectable)
 					$theme.include($content_include)
@@ -104,6 +106,9 @@
 		$theme.include($bottom_include)
 		
 		#js("$javascript_folder/IWT.min.js")
+		#js("$javascript_folder/0.chunk.js")
+<!-- 		#js("$javascript_folder/1.chunk.js") -->
+<!-- 		#js("$javascript_folder/2.chunk.js") -->
 	
 	</body>
 
