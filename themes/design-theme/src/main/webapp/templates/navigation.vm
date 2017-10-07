@@ -1,0 +1,23 @@
+<!-- Header-navbar -->
+<div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
+	<nav class="Megamenu Megamenu--default">
+		<ul class="Megamenu-list">
+			#foreach ($nav_item in $nav_items)
+				#set ($nav_item_css_class = "")
+				#if ($nav_item.isSelected())
+					#set ($nav_item_css_class = "selected")
+				#end
+	
+				<li class="Megamenu-item" id="layout_$nav_item.getLayoutId()" role="presentation">
+					<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+						$nav_item.getName()
+					</a>
+				</li>
+			#end
+		</ul>
+	</nav>
+</div>
+
+
+
+

@@ -1,0 +1,15 @@
+##set ($css_class = "${css_class} dockbar-split")
+
+##### etichette #####
+#set ($label_cookie = $languageUtil.get($locale, "label_cookie"))
+#set ($label_accetto = $languageUtil.get($locale, "label_accetto"))
+#set ($label_privacy = $languageUtil.get($locale, "label_privacy"))
+#set ($label_vai_contenuto = $languageUtil.get($locale, "label_vai_contenuto"))
+#set ($label_vai_navigazione = $languageUtil.get($locale, "label_vai_navigazione"))
+#set ($label_accedi_menu = $languageUtil.get($locale, "label_accedi_menu"))
+#set ($label_torna_inizio_contenuto = $languageUtil.get($locale, "label_torna_inizio_contenuto"))
+
+
+#set ($languages = $serviceLocator.findService("com.liferay.portal.kernel.language.LanguageUtil"))
+$languages<br/>
+$languages.getAvailableLocales($groupId)

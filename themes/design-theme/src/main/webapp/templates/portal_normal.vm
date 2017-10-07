@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+	<head>
+		<title>$the_title - $company_name</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+		
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: {
+					families: ['Titillium+Web:300,400,600,700,400italic:latin']
+				}
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+		
+		<!--[if IE 8]>
+			#js("$javascript_folder/vendor/respond.min.js")
+			#js("$javascript_folder/vendor/rem.min.js")
+			#js("$javascript_folder/vendor/selectivizr.js")
+			#js("$javascript_folder/vendor/slice.js")
+		<![endif]-->
+	
+		<!--[if lte IE 9]>
+			#js("$javascript_folder/vendor/polyfill.min.js")
+		<![endif]-->
+		
+		#js("$javascript_folder/vendor/jquery.min.js")
+	
+		$theme.include($top_head_include)
+		
+		<link rel="stylesheet" type="text/css" href="https://rawgit.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/build.css">
+	</head>
+
+	<body class="$css_class t-Pac">
+		$theme.include($body_top_include)
+		
+		<div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
+    		<p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">$label_cookie
+    		</p>
+    		<p>
+        		<button class="Button Button--default u-text-r-xxs js-cookieBarAccept u-inlineBlock u-margin-r-all">$label_accetto</button>
+        		<a href="#" class="u-text-r-xs u-color-teal-50">$label_privacyy</a>
+			</p>
+		</div>
+		<ul class="Skiplinks js-fr-bypasslinks u-hiddenPrint">
+			<li><a href="#main">$label_vai_contenuto</a></li>
+			<li><a class="js-fr-offcanvas-open" href="#menu" aria-controls="menu" aria-label="$label_accedi_menu" title="$label_accedi_menu">$label_vai_navigazione</a></li>
+		</ul>
+		
+		#if ($is_signed_in)
+			#dockbar()
+		#end
+		
+		## includo header della pagina, contenente la nuova navigation
+		#parse ("$full_templates_path/header.vm")
+		
+		## main della pagina
+		<div id="main">
+			#if (!$is_signed_in)
+				<a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+			#end
+			
+			## content della pagina
+			<div id="content">
+				<nav id="breadcrumbs">#breadcrumbs()</nav>
+		
+				#if ($selectable)
+					$theme.include($content_include)
+				#else
+					$portletDisplay.recycle()
+		
+					$portletDisplay.setTitle($the_title)
+		
+					$theme.wrapPortlet("portlet.vm", $content_include)
+				#end
+			</div>
+			
+			## includo il footer della pagina
+			#parse ("$full_templates_path/footer.vm")
+
+		</div>
+		
+	    <a href="#" title="$label_torna_inizio_contenuto" class="ScrollTop js-scrollTop js-scrollTo">
+  			<i class="ScrollTop-icon Icon-collapse" aria-hidden="true"></i>
+  			<span class="u-hiddenVisually">$label_torna_inizio_contenuto</span>
+		</a>
+		
+		$theme.include($body_bottom_include)
+		
+		$theme.include($bottom_include)
+		
+		#js("$javascript_folder/IWT.min.js")
+	
+	</body>
+
+</html>
