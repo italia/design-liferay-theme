@@ -62,7 +62,7 @@
 		</ul>
 		
 		<!-- #if ($is_signed_in) -->
-<!-- 		#dockbar() -->
+		#dockbar()
 		<!-- #end -->
 		
 		## includo header della pagina, contenente la nuova navigation

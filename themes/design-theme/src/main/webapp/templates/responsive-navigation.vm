@@ -15,8 +15,8 @@
 						#set ($nav_item_css_class = "selected")
 					#end
 		
-					<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" role="presentation">
-						<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+					<li class="$nav_item_css_class" role="presentation">
+						<a href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
 							$nav_item.getName()
 						</a>
 		
@@ -29,8 +29,8 @@
 										#set ($nav_child_css_class = "selected")
 									#end
 		
-									<li class="$nav_child_css_class" id="layout_$nav_child.getLayoutId()" role="presentation">
-										<a aria-labelledby="layout_$nav_child.getLayoutId()" href="$nav_child.getURL()" role="menuitem">$nav_child.getName()</a>
+									<li class="$nav_child_css_class" role="presentation">
+										<a href="$nav_child.getURL()" role="menuitem">$nav_child.getName()</a>
 									</li>
 								#end
 							</ul>

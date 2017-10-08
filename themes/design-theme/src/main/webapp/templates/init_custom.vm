@@ -8,3 +8,4 @@
 #set ($label_vai_navigazione = $languageUtil.get($locale, "label_vai_navigazione"))
 #set ($label_accedi_menu = $languageUtil.get($locale, "label_accedi_menu"))
 #set ($label_torna_inizio_contenuto = $languageUtil.get($locale, "label_torna_inizio_contenuto"))
+#set ($label_lingua_attiva = $languageUtil.get($locale, "label_lingua_attiva"))

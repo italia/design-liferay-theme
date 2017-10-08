@@ -4,18 +4,21 @@
 		<div class="Header-owner Headroom-hideme ">
 			<a href=""><span>Nome amministrazione afferente</span></a>
 			<div class="Header-languages ">
-				<a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
-					<span class="u-hiddenVisually">lingua attiva:</span>
-					<span class="">ITA</span>
-					<!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
-					<span class="Icon Icon-expand u-padding-left-xs"></span>
-				</a>
-				<div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
-					<span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
-					<ul>
-						<li><a href="" class="u-padding-r-all"><span lang="en">English</span></a></li>
-					</ul>
-				</div>
+<!-- 				<a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock"> -->
+<!-- 					<span class="u-hiddenVisually">lingua attiva:</span> -->
+<!-- 					<span class="">ITA</span> -->
+<!-- 					<span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
+<!-- 					<span class="Icon Icon-expand u-padding-left-xs"></span> -->
+<!-- 				</a> -->
+<!-- 				<div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone"> -->
+<!-- 					<span class="Icon-drop-down Dropdown-arrow u-color-white"></span> -->
+<!-- 					<ul> -->
+<!-- 						<li><a href="" class="u-padding-r-all"><span lang="en">English</span></a></li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
+					
+					#parse ("$full_templates_path/language.vm")
+
 			</div>
 		</div>
 	</div>

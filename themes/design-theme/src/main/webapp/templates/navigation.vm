@@ -8,12 +8,23 @@
 					#set ($nav_item_css_class = "selected")
 				#end
 	
-				<li class="Megamenu-item" id="layout_$nav_item.getLayoutId()" role="presentation">
-					<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+				<li class="Megamenu-item" role="presentation">
+					<a href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
 						$nav_item.getName()
 					</a>
 				</li>
 			#end
+			
+			#if (!$is_signed_in)
+				<li class="Megamenu-item" role="presentation">
+					<a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+				</li>
+			#else
+				<li class="Megamenu-item" role="presentation">
+					<a href="$sign_out_url" id="sign-out" rel="nofollow">$sign_out_text</a>
+				</li>
+			#end
+			
 		</ul>
 	</nav>
 </div>
