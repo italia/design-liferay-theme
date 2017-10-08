@@ -8,16 +8,16 @@ Il tema è stato realizzato per essere utilizzato sulla versione "Liferay Portal 
 
 ### Prerequisites
 
-Liferay Portal 6.2 CE GA6 bundle Tomcat-7.0.62
-Maven
+ * [Liferay Portal 6.2 CE GA6 bundle Tomcat-7.0.62](https://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.2.5%20GA6/)
+ * [Maven](https://maven.apache.org/download.cgi)
 
 ### Installing
 Installazione tramite deploy nella relativa cartella sotto Liferay:
+ 
+ * Scaricare il progetto e lanciare il build tramite Maven utilizzando il comando: `mvn clean install -Dmaven.test.skip=true`.
+ * Copiare il war generato all'interno della cartella di DEPLOY presente nell'installazione di Liferay.
+ * Una volta termminata l'installazione, loggarsi su Liferay e associare il tema alle pagine.
 
-	Scaricare il progetto e lanciare il build tramite Maven.
-	Copiare il war generato all'interno della cartella di DEPLOY presente nella installazione di Liferay.
-	Una volta termminata l'installazione, loggarsi su Liferay e associare il tema alle pagine.
-	
 
 ### TODO
 
