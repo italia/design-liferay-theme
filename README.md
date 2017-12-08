@@ -1,10 +1,16 @@
+ATTENZIONE:
+Questo repository contiene software in versione sperimentale, e non √® ancora pronto per un utilizzo in produzione.
+
+[![Join the #design-liferay-theme channel](https://img.shields.io/badge/Slack%20channel-%23design--liferay--theme-blue.svg)](https://developersitalia.slack.com/messages/C8CR7RFTQ)
+[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
+
 # design-liferay-theme
 
 Creazione di un tema per Liferay basato su "User Interface design guidelines".
 
 ## Getting Started
 
-Il tema Ë stato realizzato per essere utilizzato sulla versione "Liferay Portal 6.2 CE GA6" in bundle con Tomcat-7.0.62. All'interno del tema sono presenti alcune portlet embeddate: la portlet della lingua, un form che si aggancia alla portlet della ricerca, la navigazione orizzontale (verticale nella modalit‡ responsive). A titolo di esempio Ë stato riportato nell'header e nel footer tutto il contenuto presente nelle pagine di esempio contenute all'interno del Web Toolkit. Inoltre viene allegato una pagina html, con il cui codice Ë possibile creare un articolo web all'interno della piattaforma e pubblicarlo su una pagina.
+Il tema √® stato realizzato per essere utilizzato sulla versione "Liferay Portal 6.2 CE GA6" in bundle con Tomcat-7.0.62. All'interno del tema sono presenti alcune portlet embeddate: la portlet della lingua, un form che si aggancia alla portlet della ricerca, la navigazione orizzontale (verticale nella modalit√† responsive). A titolo di esempio √® stato riportato nell'header e nel footer tutto il contenuto presente nelle pagine di esempio contenute all'interno del Web Toolkit. Inoltre viene allegato una pagina html, con il cui codice √® possibile creare un articolo web all'interno della piattaforma e pubblicarlo su una pagina.
 
 ### Prerequisites
 
@@ -21,7 +27,7 @@ Installazione tramite deploy nella relativa cartella sotto Liferay:
 
 ### TODO
 
-All'interno del tema sono stati inseriti alcuni file contenuti all'interno del web toolkit: tra questi il file "Build.css". La presenza di alcune regole e attributi ha provocato errori dovuti alla compilazione con il SASS oltre a conflitti con i file css nativi di Liferay: per questo motivo, in fase di creazione si Ë scelto come "Parent theme" la versione "_unstyled", per limitare i conflitti. Il file Build.css Ë stato inserito tramite un link esterno (https://rawgit.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/build.css). Si dovr‡ far coesistere i file nativi con quelli presenti nel web toolkit, conservando lo stile degli elementi nativi di Liferay, come Dockbar, controlli sulle portlet, ecc...
+All'interno del tema sono stati inseriti alcuni file contenuti all'interno del web toolkit: tra questi il file "Build.css". La presenza di alcune regole e attributi ha provocato errori dovuti alla compilazione con il SASS oltre a conflitti con i file css nativi di Liferay: per questo motivo, in fase di creazione si √® scelto come "Parent theme" la versione "_unstyled", per limitare i conflitti. Il file Build.css √® stato inserito tramite un link esterno (https://rawgit.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/build.css). Si dovr√† far coesistere i file nativi con quelli presenti nel web toolkit, conservando lo stile degli elementi nativi di Liferay, come Dockbar, controlli sulle portlet, ecc...
 
 
 ## Authors
