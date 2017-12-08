@@ -1,0 +1,52 @@
+<section class="Offcanvas Offcanvas--right Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden u-nojsDisplayNone u-hiddenPrint" id="menu">
+	<h2 class="u-hiddenVisually">Menu di navigazione</h2>
+	<div class="Offcanvas-content u-background-white">
+		<div class="Offcanvas-toggleContainer u-background-70 u-jsHidden">
+			<a class="Hamburger-toggleContainer u-block u-color-white u-padding-bottom-xxl u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close" aria-controls="menu" aria-label="esci dalla navigazione" title="esci dalla navigazione" href="#">
+				<span class="Hamburger-toggle is-active" aria-hidden="true"></span>
+			</a>
+		</div>
+		<nav role="navigation">
+			<ul class="Linklist Linklist--padded Treeview Treeview--default js-Treeview u-text-r-xs" aria-label="#language ("site-pages")" role="menubar">
+				#foreach ($nav_item in $nav_items)
+					#set ($nav_item_css_class = "")
+
+					#if ($nav_item.isSelected())
+						#set ($nav_item_css_class = "selected")
+					#end
+		
+					<li class="$nav_item_css_class" role="presentation">
+						<a href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+							$nav_item.getName()
+						</a>
+		
+						#if ($nav_item.hasChildren())
+							<ul role="menu">
+								#foreach ($nav_child in $nav_item.getChildren())
+									#set ($nav_child_css_class = "false")
+		
+									#if ($nav_child.isSelected())
+										#set ($nav_child_css_class = "selected")
+									#end
+		
+									<li class="$nav_child_css_class" role="presentation">
+										<a href="$nav_child.getURL()" role="menuitem">$nav_child.getName()</a>
+									</li>
+								#end
+							</ul>
+						#end
+					</li>
+				#end
+				#if (!$is_signed_in)
+					<li data-megamenu-class="u-hidden">
+						<a class="Button u-border-none u-color-95 u-background-compl u-text-r-xxs" data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+					</li>
+				#else
+					<li data-megamenu-class="u-hidden">
+						<a class="Button u-border-none u-color-95 u-background-compl u-text-r-xxs" href="$sign_out_url" id="sign-out" rel="nofollow">$sign_out_text</a>
+					</li>
+				#end
+			</ul>
+		</nav>
+	</div>
+</section>

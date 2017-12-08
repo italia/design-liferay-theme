@@ -1,0 +1,34 @@
+<!-- Header-navbar -->
+<div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
+	<nav class="Megamenu Megamenu--default">
+		<ul class="Megamenu-list">
+			#foreach ($nav_item in $nav_items)
+				#set ($nav_item_css_class = "")
+				#if ($nav_item.isSelected())
+					#set ($nav_item_css_class = "selected")
+				#end
+	
+				<li class="Megamenu-item" role="presentation">
+					<a href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+						$nav_item.getName()
+					</a>
+				</li>
+			#end
+			
+			#if (!$is_signed_in)
+				<li class="Megamenu-item" role="presentation">
+					<a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+				</li>
+			#else
+				<li class="Megamenu-item" role="presentation">
+					<a href="$sign_out_url" id="sign-out" rel="nofollow">$sign_out_text</a>
+				</li>
+			#end
+			
+		</ul>
+	</nav>
+</div>
+
+
+
+

@@ -1,0 +1,22 @@
+#set ($currentLanguageId = $themeDisplay.getLanguageId())
+#set ($currentLocale = $themeDisplay.getLocale())
+
+#foreach ($language in $languageUtil.getAvailableLocales($group_id))
+	#if ($language.equals($currentLocale))
+		<a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
+			<span class="u-hiddenVisually">$label_lingua_attiva:</span>
+			<span class="u-textUppercase">$language.getISO3Language()</span>
+			<span class="Icon Icon-expand u-padding-left-xs"></span>
+		</a>
+	#end
+#end
+<div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+	<span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+	<ul>
+		#foreach ($otherLanguage in $languageUtil.getAvailableLocales($group_id))
+			#if (!$otherLanguage.equals($currentLocale))
+				<li><a href="$themeDisplay.getURLCurrent()?p_p_id=82&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_82_struts_action=%2Flanguage%2Fview&_82_redirect=%2F&_82_languageId=$otherLanguage" class="u-padding-r-all">$otherLanguage.getDisplayLanguage($otherLanguage)</a></li>
+			#end
+		#end
+	</ul>
+</div>
