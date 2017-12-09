@@ -1,5 +1,5 @@
-ATTENZIONE:
-Questo repository contiene software in versione sperimentale, e non è ancora pronto per un utilizzo in produzione.
+> **ATTENZIONE:**
+> Questo repository contiene software in versione sperimentale, e non è ancora pronto per un utilizzo in produzione. Verificare lo stato di avanzamento del progetto nella sezione [TODO](#todo) oppure consultando le [issue aperte](https://github.com/italia/design-liferay-theme/issues).
 
 [![Join the #design-liferay-theme channel](https://img.shields.io/badge/Slack%20channel-%23design--liferay--theme-blue.svg)](https://developersitalia.slack.com/messages/C8CR7RFTQ)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
@@ -27,7 +27,8 @@ Installazione tramite deploy nella relativa cartella sotto Liferay:
 
 ### TODO
 
-All'interno del tema sono stati inseriti alcuni file contenuti all'interno del web toolkit: tra questi il file "Build.css". La presenza di alcune regole e attributi ha provocato errori dovuti alla compilazione con il SASS oltre a conflitti con i file css nativi di Liferay: per questo motivo, in fase di creazione si è scelto come "Parent theme" la versione "_unstyled", per limitare i conflitti. Il file Build.css è stato inserito tramite un link esterno (https://rawgit.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/build.css). Si dovrà far coesistere i file nativi con quelli presenti nel web toolkit, conservando lo stile degli elementi nativi di Liferay, come Dockbar, controlli sulle portlet, ecc...
+ * All'interno del tema sono stati inseriti alcuni file contenuti all'interno del web toolkit: tra questi il file "Build.css". La presenza di alcune regole e attributi ha provocato errori dovuti alla compilazione con il SASS oltre a conflitti con i file css nativi di Liferay: per questo motivo, in fase di creazione si è scelto come "Parent theme" la versione "_unstyled", per limitare i conflitti. Il file Build.css è stato inserito tramite un link esterno (https://rawgit.com/italia/design-web-toolkit/gh-pages/design-web-toolkit/build/build.css).
+ * Non è ancora completata inoltre la lavorazione per far coesistere i file nativi con quelli presenti nel web toolkit, conservando lo stile degli elementi nativi di Liferay, come Dockbar, controlli sulle portlet, ecc...
 
 
 ## Authors
