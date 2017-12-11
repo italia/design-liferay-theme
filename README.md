@@ -1,6 +1,7 @@
 > **ATTENZIONE:**
 > Questo repository contiene software in versione sperimentale, e non è ancora pronto per un utilizzo in produzione. Verificare lo stato di avanzamento del progetto nella sezione [TODO](#todo) oppure consultando le [issue aperte](https://github.com/italia/design-liferay-theme/issues).
 
+[![Build Status](https://travis-ci.org/italia/design-liferay-theme.svg?branch=master)](https://travis-ci.org/italia/design-liferay-theme)
 [![Join the #design-liferay-theme channel](https://img.shields.io/badge/Slack%20channel-%23design--liferay--theme-blue.svg)](https://developersitalia.slack.com/messages/C8CR7RFTQ)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
